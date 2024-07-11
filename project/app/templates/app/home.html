@@ -1,0 +1,18 @@
+
+{{key}}
+<body style="background-color: aqua;">
+<center><h1>sign up registration form</h1></center>
+<center><form action="{% url 'register' %}" method='post' style="padding: 50px; font-size: x-large;">
+    {% csrf_token %}
+     Name<input type="text" name='name' required style="margin-left: 10px;"><br/>
+     Email<input type="email" name="email" required style="margin-left: 10px;"><br/>
+     Contact<input type="number" name="contact" required style="margin-left: 10px;"><br/>
+     Password<input type="password" name="password" required style="margin-left: 10px;"><br>
+     Cpassword<input type="password" name="cpassword" required style="margin-left: 10px;">
+     <input type='submit' value=' sign up'></br/>
+</form>
+<a href="{% url 'login' %}">
+    login
+</a>
+</center>
+</body>  
